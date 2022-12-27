@@ -65,4 +65,19 @@ header, footer, body, .video-container {
     background-color: lightpink;
 }
 
+ /*стиль для кнопки (отзывы)*/
+.review-container, .review-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+/*стиль для блока отзывов*/
+.review-text {
+    display: block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
 

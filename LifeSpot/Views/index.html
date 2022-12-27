@@ -2,18 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LifeSpot</title>  
+    <title>LifeSpot</title>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <!-- Внешний скрипт с функциями -->
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
+    <!-- Внутренний скрипт с вызовами функций -->
+    <script>
+        // проверка на возраст
+        checkAge();
+        // сохранение сессии
+        handleSession();
+        // вывод данных сессии в консоль
+        printSession();
+        // функция для получения пользовательского ввода
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+    </script>
 </head>
+
+<!--SIDEBAR-->
+
 <body>
     <div class="bordered">
         <header id="header-index">
             <!--Заголовок страницы-->
-            <h1>LifeSpot - прямые трансляции с улиц1</h1>
+            <h1>LifeSpot - прямые трансляции с улиц</h1>
             <!--Параграф-->
-            <p>Покажем, что происходит прямо сейчас1</p>
-            <div class="find"> 
-                 <p> Поиск: <a><input type="text" size="100">  </a></p>                                    
+            <p>Покажем, что происходит прямо сейчас</p>
+            <div class="find">
+                <p> Поиск: <a><input type="text" oninput="filterContent()" size="100"> </a> </p>
             </div>
         </header>
         <div class="video-container">
@@ -30,16 +48,7 @@
         </div>
     </div>
 </body>
+
+<!--FOOTER-->
+
 </html>
-<!--Футер страницы находится под основной частью (body)-->
-<footer>
-    <p>LifeSpot - все права защищены</p>
-    <p>Связаться с нами: contact@lifespot.ru</p>
-</footer>
-<!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
-<aside id="sidebar">
-    <div class="navbar">
-        <a href="/"><p>Все трансляции</p></a>
-        <a href="/"><p>О проекте</p></a>
-    </div>
-</aside>
